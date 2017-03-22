@@ -1,10 +1,10 @@
 spec = Gem::Specification.new do |s|
   s.name              = 'piwik_analytics'
-  s.version           = '1.0.6'
+  s.version           = '1.1.0'
   s.date              = Time.now.strftime "%Y-%m-%d"
-  s.author            = 'zzeroo'
-  s.email             = 'co@zzeroo.com'
-  s.homepage          = 'https://github.com/zzeroo/piwik_analytics/'
+  s.author            = 'dlpierce'
+  s.email             = 'dlpierce@indiana.edu'
+  s.homepage          = 'https://github.com/IUBLibTech/piwik_analytics'
   s.summary           = "[Rails] Easily include Piwik tracking in your Rails application."
 
   s.description = <<-DESC
