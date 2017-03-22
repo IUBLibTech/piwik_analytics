@@ -10,23 +10,22 @@
 #   Changing the Pause Timer (http://developer.piwik.org/api-reference/tracking-javascript)
 #   false: use default of 500ms
 #
-production:
-  piwik:
+default:
+  piwik: &default
     id_site:
     url: localhost
-    disabled: false
+    disabled: true
     trackingTimer: false
 
 development:
   piwik:
-    id_site:
-    url: localhost
-    disabled: true
-    trackingTimer: false
+    <<: *default
 
 test:
   piwik:
-    id_site:
-    url: localhost
-    disabled: true
-    trackingTimer: false
+    <<: *default
+
+production:
+  piwik:
+    <<: *default
+    disabled: false

@@ -39,7 +39,7 @@ module PiwikAnalytics
     #
     #
     def disabled?
-      @disabled ||= ((user_configuration_from_key('disabled') && id_site != nil) || false)
+      @disabled ||= (user_configuration_from_key('disabled') || id_site.nil? || false)
     end
 
     private
