@@ -15,7 +15,7 @@ module PiwikAnalytics
     # Defaults to 1
     #
     def id_site
-      @id_site ||= (user_configuration_from_key('id_site') || 1)
+      @id_site ||= (user_configuration_from_key('id_site'))
     end
 
     # When a user clicks to download a file, or clicks on an outbound link, 
@@ -34,20 +34,12 @@ module PiwikAnalytics
     end
 
     #
-    # Whether or not to use the async tracking
-    # Defaults to false
-    #
-    def use_async?
-      @use_async ||= (user_configuration_from_key('use_async') || false)
-    end
-
-    #
     # Whether or not to disable Piwik.
     # Defaults to false.
     #
     #
     def disabled?
-      @disabled ||= (user_configuration_from_key('disabled') || false)
+      @disabled ||= ((user_configuration_from_key('disabled') && id_site != nil) || false)
     end
 
     private
